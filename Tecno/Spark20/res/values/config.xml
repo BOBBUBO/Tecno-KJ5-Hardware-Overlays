@@ -112,13 +112,12 @@
 			<item>mobile_vsim,2003,0,-1,60000,true</item>
 	</string-array>
 
-    <bool name="config_allow_ussd_over_ims">true</bool>
+
     <bool name="config_automatic_brightness_available">true</bool>
     <bool name="config_hotswapCapable">true</bool>
     <bool name="config_setColorTransformAccelerated">true</bool>
     <bool name="config_showNavigationBar">true</bool>
     <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
-    <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
     <bool name="skip_restoring_network_selection">true</bool>
 
@@ -128,7 +127,6 @@
     <dimen name="navigation_bar_height_landscape">40.0dip</dimen>
     <dimen name="navigation_bar_width">40.0dip</dimen>
     <dimen name="quick_qs_offset_height">40.0dip</dimen>
-    <dimen name="quick_qs_total_height">164.0dip</dimen>
     <dimen name="status_bar_height_landscape">28.0dip</dimen>
     <dimen name="status_bar_height_portrait">40.0dip</dimen>
 
