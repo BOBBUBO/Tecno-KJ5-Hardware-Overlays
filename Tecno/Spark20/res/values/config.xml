@@ -111,6 +111,7 @@
 			<item>mobile_bip,2002,0,3,60000,true</item>
 			<item>mobile_vsim,2003,0,-1,60000,true</item>
 	</string-array>
+
     <bool name="config_allow_ussd_over_ims">true</bool>
     <bool name="config_automatic_brightness_available">true</bool>
     <bool name="config_hotswapCapable">true</bool>
@@ -120,7 +121,9 @@
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_useDevInputEventForAudioJack">true</bool>
     <bool name="skip_restoring_network_selection">true</bool>
+
     <item type="dimen" name="config_screenBrightnessSettingMinimumFloat">0.001960785</item>
+
     <dimen name="navigation_bar_height">40.0dip</dimen>
     <dimen name="navigation_bar_height_landscape">40.0dip</dimen>
     <dimen name="navigation_bar_width">40.0dip</dimen>
@@ -128,5 +131,6 @@
     <dimen name="quick_qs_total_height">164.0dip</dimen>
     <dimen name="status_bar_height_landscape">28.0dip</dimen>
     <dimen name="status_bar_height_portrait">40.0dip</dimen>
-	<string name="config_mainBuiltInDisplayCutout">M -24,0 L -24,40 L 24,40 L 24,0 Z @dp</string>
+
+    <string name="config_mainBuiltInDisplayCutout">M -24,0 L -24,40 L 24,40 L 24,0 Z @dp</string>
 </resources>
