@@ -34,7 +34,7 @@ jobs:
     - name: Run test scripts
       run: |
         PATH=~/bin:$PATH
-        cd workspace && cd vendor_hardware_overlay
+        cd workspace && cd Tecno-KJ5-Hardware-Overlays
         git config --global user.name "Johx22"
         git config --global user.email "johannjose2004@gmail.com"
         cd tests
