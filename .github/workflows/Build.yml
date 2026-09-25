@@ -4,6 +4,15 @@ on:
   pull_request:
     branches: [pie]
   workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type'
+        required: true
+        default: 'apk'
+        type: choice
+        options:
+          - apk
+          - ksu
 
 jobs:
   build:
@@ -15,7 +24,7 @@ jobs:
 
     - name: Prepare the environment
       run: |
-        sudo apt -y install git-core git xmlstarlet
+        sudo apt -y install git-core git xmlstarlet zip
         sudo apt update
 
     - name: Run test scripts
@@ -27,9 +36,19 @@ jobs:
       run: |
         cd build
         bash build.sh
+      env:
+        BUILD_TYPE: ${{ github.event.inputs.build_type }}
 
     - name: Upload APK
+      if: github.event.inputs.build_type == 'apk'
       uses: actions/upload-artifact@v4
       with:
         path: build/*.apk
         name: Overlays
+
+    - name: Upload KSU Module
+      if: github.event.inputs.build_type == 'ksu'
+      uses: actions/upload-artifact@v4
+      with:
+        path: build/tecno-kj5-overlays-ksu-module.zip
+        name: KSU-Module

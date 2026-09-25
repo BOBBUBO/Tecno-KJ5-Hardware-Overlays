@@ -1,0 +1,35 @@
+#!/sbin/sh
+
+ui_print() {
+    echo "*****************************************"
+    echo " $1"
+    echo "*****************************************"
+}
+
+mount_partition() {
+    if mount | grep -q " /product "; then
+        PRODUCT_MOUNTED=1
+    else
+        mount -o rw /dev/block/by-name/product /product 2>/dev/null || mount -t ext4 -o rw /dev/block/by-name/product /product 2>/dev/null
+    fi
+}
+
+ui_print "Installing Tecno KJ5 Overlays..."
+
+if [ -d /product/overlay ]; then
+    mount_partition
+    cp -r /tmp/overlay/module/system/product/overlay/* /product/overlay/
+    ui_print "Overlays installed to /product/overlay/"
+else
+    ui_print "/product/overlay not found! Trying /system/product/overlay..."
+    if [ -d /system/product/overlay ]; then
+        mount -o rw /dev/block/by-name/system /system 2>/dev/null
+        cp -r /tmp/overlay/module/system/product/overlay/* /system/product/overlay/
+        ui_print "Overlays installed to /system/product/overlay/"
+    else
+        ui_print "ERROR: No overlay directory found!"
+        exit 1
+    fi
+fi
+
+ui_print "Done!"

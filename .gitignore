@@ -1,3 +1,7 @@
 .*.swp
 .DS_Store
 .idea/*
+build/*.apk
+build/ksu_build/
+build/tecno-kj5-overlays-ksu-module.zip
+tests/priorities

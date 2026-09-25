@@ -1,0 +1,4 @@
+mount /data /data
+ui_print("Installing Tecno KJ5 Overlays...")
+run_program("/sbin/busybox", "cp", "-rf", "/tmp/overlay/module/system/product/overlay/*", "/product/overlay/")
+ui_print("Overlays installed successfully!")

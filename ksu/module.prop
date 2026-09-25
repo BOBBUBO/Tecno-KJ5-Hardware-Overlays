@@ -1,0 +1,8 @@
+module_id=tecno_kj5_overlays
+name=Tecno KJ5 Hardware Overlays
+version=1.0
+versionCode=1
+author=BOBBUBO
+description=Hardware overlays for Tecno KJ5 (Spark 20)
+updateJson=https://raw.githubusercontent.com/BOBBUBO/Tecno-KJ5-Hardware-Overlays/pie/ksu/update.json
+kernelSu=1
