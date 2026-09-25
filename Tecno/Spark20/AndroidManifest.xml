@@ -2,9 +2,9 @@
         package="me.phh.treble.overlay.tecno.spark20"
         android:versionCode="1"
         android:versionName="1.0">
-        <overlay android:targetPackage="android"
-        	android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
-        	android:requiredSystemPropertyValue="+TECNO/KJ5"
+<overlay android:targetPackage="android"
+		android:requiredSystemPropertyName="ro.product.vendor.device"
+		android:requiredSystemPropertyValue="TECNO-KJ5"
 		android:priority="427"
 		android:isStatic="true" />
 </manifest>
